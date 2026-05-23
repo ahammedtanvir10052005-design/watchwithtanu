@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WatchWithTanu</title>
+  <title>WatchWithTanu Sports</title>
+
   <style>
     body{
       background:black;
@@ -9,25 +10,59 @@
       text-align:center;
       font-family:Arial;
     }
+
     h1{
-      margin-top:40px;
       color:red;
+      margin-top:20px;
     }
-    video{
+
+    iframe{
       width:90%;
-      max-width:800px;
+      height:500px;
       margin-top:20px;
       border-radius:10px;
+      border:none;
+    }
+
+    button{
+      padding:12px 20px;
+      margin:10px;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+      cursor:pointer;
     }
   </style>
 </head>
+
 <body>
 
-<h1>WatchWithTanu Live Streaming</h1>
+<h1>WatchWithTanu Sports Live</h1>
 
-<video controls autoplay>
-  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-</video>
+<button onclick="playChannel('https://www.youtube.com/embed/jfKfPfyJRdk')">
+Sports Channel 1
+</button>
+
+<button onclick="playChannel('https://www.youtube.com/embed/5qap5aO4i9A')">
+Sports Channel 2
+</button>
+
+<button onclick="playChannel('https://www.youtube.com/embed/x5MkVTvOViQ')">
+Sports Channel 3
+</button>
+
+<br>
+
+<iframe id="player"
+src="https://www.youtube.com/embed/jfKfPfyJRdk"
+allowfullscreen>
+</iframe>
+
+<script>
+function playChannel(link){
+  document.getElementById("player").src = link;
+}
+</script>
 
 </body>
 </html>
